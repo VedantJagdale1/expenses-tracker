@@ -1,9 +1,7 @@
 //
 //  RecentTransactionsWidget.swift
 //  ExpenditureWidgetExtension
-//
-//  Created by Rafael Soh on 12/8/22.
-//
+
 
 import SwiftUI
 import WidgetKit

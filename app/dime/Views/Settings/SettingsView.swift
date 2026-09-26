@@ -1,9 +1,5 @@
 //
 //  SettingsView.swift
-//  xpenz
-//
-//  Created by Rafael Soh on 20/5/22.
-//
 
 import Combine
 import ConfettiSwiftUI
@@ -390,57 +386,19 @@ struct SettingsView: View {
                 SettingsRowView(systemImage: "flame.fill", title: "Feature Lab", colour: 122)
               }
 
-              Button {
-                showTipJarMenu = true
-              } label: {
-                SettingsRowView(systemImage: "heart.fill", title: "Tip Jar", colour: 123)
-              }
+              
 
-              Button {
-                supportEmail.send(openURL: openURL)
-              } label: {
-                SettingsRowView(systemImage: "ladybug.fill", title: "Report Bug", colour: 124)
-              }
+              
 
-              Button {
-                featureRequestEmail.send(openURL: openURL)
-              } label: {
-                SettingsRowView(
-                  systemImage: "hand.wave.fill", title: "Feature Request", colour: 125)
-              }
+              
 
-              Button {
-                let url = "https://apps.apple.com/app/id1635280255?action=write-review"
-                guard let writeReviewURL = URL(string: url)
-                else { fatalError("Expected a valid URL") }
-                UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
-              } label: {
-                SettingsRowView(systemImage: "star.fill", title: "Rate on App Store", colour: 126)
-              }
+              
 
-              Button {
-                shareSheet(url: "https://apps.apple.com/app/id1635280255")
-              } label: {
-                SettingsRowView(systemImage: "shareplay", title: "Share with Friends", colour: 127)
-              }
+              
 
-              Button {
-                if let url = URL(string: "https://www.x.com/budgetwithdime") {
-                  UIApplication.shared.open(url)
-                }
-              } label: {
-                SettingsRowView(systemImage: "bird.fill", title: "Follow Dime on X", colour: 128)
-                  .frame(maxWidth: .infinity)
-              }
+              
 
-              Button {
-                if let url = URL(string: "https://www.x.com/rarfell") {
-                  UIApplication.shared.open(url)
-                }
-              } label: {
-                SettingsRowView(
-                  systemImage: "camera.fill", title: "Follow Rafael on X", colour: 129)
-              }
+              
             }
             .padding(10)
             .background(Color.SettingsBackground, in: RoundedRectangle(cornerRadius: 9))
@@ -450,18 +408,18 @@ struct SettingsView: View {
 
           VStack(spacing: 5) {
             HStack(spacing: 3) {
-              Text("Version \(UIApplication.appVersion ?? "") (\(UIApplication.buildNumber ?? ""))")
+              Text("")
                 .font(.system(.footnote, design: .rounded).weight(.medium))
 
                 //                                .font(.system(size: 14, weight: .medium, design: .rounded))
                 .foregroundColor(Color.SubtitleText)
 
-              Text("·")
+              Text("")
                 .font(.system(.footnote, design: .rounded).weight(.medium))
 
                 .foregroundColor(Color.SubtitleText)
 
-              Text("What's New")
+              Text("")
                 .font(.system(.footnote, design: .rounded).weight(.medium))
 
                 .foregroundColor(Color.PrimaryText)
@@ -470,7 +428,7 @@ struct SettingsView: View {
                 }
             }
 
-            Text("Made with ❤️ by \(makeAttributedString()) from 🇸🇬")
+            Text("")
               .font(.system(.footnote, design: .rounded).weight(.medium))
 
               .foregroundColor(Color.SubtitleText)
@@ -538,9 +496,9 @@ struct SettingsView: View {
   }
 
   func makeAttributedString() -> AttributedString {
-    var string = AttributedString("Rafael")
+    var string = AttributedString("")
     string.foregroundColor = Color.PrimaryText
-    string.link = URL(string: "https://www.x.com/rarfell")
+    string.link = URL(string: "")
 
     return string
   }

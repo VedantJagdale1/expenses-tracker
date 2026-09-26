@@ -1,9 +1,7 @@
 //
 //  BudgetInsightsIntent.swift
 //  dime
-//
-//  Created by Rafael Soh on 6/8/23.
-//
+
 
 import AppIntents
 import Foundation

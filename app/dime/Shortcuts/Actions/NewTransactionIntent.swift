@@ -1,9 +1,5 @@
 //
 //  NewTransactionIntent.swift
-//  dime
-//
-//  Created by Rafael Soh on 23/7/23.
-//
 
 import AppIntents
 import Foundation

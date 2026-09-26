@@ -1,9 +1,6 @@
 //
 //  MainBudgetWidget.swift
-//  dime
-//
-//  Created by Rafael Soh on 12/1/23.
-//
+
 
 import SwiftUI
 import WidgetKit

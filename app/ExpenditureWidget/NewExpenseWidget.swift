@@ -1,9 +1,7 @@
 //
 //  NewExpenseWidget.swift
 //  ExpenditureWidgetExtension
-//
-//  Created by Rafael Soh on 9/9/22.
-//
+
 
 import SwiftUI
 import WidgetKit

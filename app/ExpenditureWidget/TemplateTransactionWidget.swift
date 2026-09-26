@@ -1,9 +1,7 @@
 //
 //  TemplateTransactionWidget.swift
 //  ExpenditureWidgetExtension
-//
-//  Created by Rafael Soh on 11/9/23.
-//
+
 
 // import WidgetKit
 // import SwiftUI

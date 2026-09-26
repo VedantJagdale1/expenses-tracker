@@ -1,9 +1,6 @@
 //
 //  dimeApp.swift
-//  dime
-//
-//  Created by Rafael Soh on 11/7/22.
-//
+
 
 import SwiftUI
 

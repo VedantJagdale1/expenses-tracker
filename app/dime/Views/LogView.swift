@@ -5,7 +5,7 @@
 //  Created by Rafael Soh on 19/5/22.
 //
 
-import CloudKitSyncMonitor
+//import CloudKitSyncMonitor
 import CoreData
 import Foundation
 import SwiftUIIntrospect
@@ -13,7 +13,7 @@ import Popovers
 import SwiftUI
 
 struct LogView: View {
-    @ObservedObject var syncMonitor = SyncMonitor.shared
+    //@ObservedObject var syncMonitor = SyncMonitor.shared
 
     @State var updatedRecurring = false
 
@@ -266,27 +266,18 @@ struct LogView: View {
             .fullScreenCover(isPresented: $searchMode) {
                 SearchView()
             }
-            .onChange(of: syncMonitor.syncStateSummary) { newState in
-                if newState == .succeeded && !updatedRecurring {
-                    dataController.updateRecurringTransactions()
-                    updatedRecurring = true
+            //.onChange(of: syncMonitor.syncStateSummary) { newState in
+              //  if newState == .succeeded && !updatedRecurring {
+                //    dataController.updateRecurringTransactions()
+                  //  updatedRecurring = true
 
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
-                        updatedRecurring = false
-                    }
-                }
-            }
+                    //DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
+                      //  updatedRecurring = false
+                   // }
+             //   }
+           // }
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-                if syncMonitor.syncStateSummary == .succeeded && !updatedRecurring {
-                    dataController.updateRecurringTransactions()
-                    updatedRecurring = true
-
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
-                        updatedRecurring = false
-                    }
-                } else if !NSUbiquitousKeyValueStore.default.bool(forKey: "icloud_sync") {
-                    dataController.updateRecurringTransactions()
-                }
+                dataController.updateRecurringTransactions()
             }
             .onChange(of: launchSearch) { _ in
                 searchMode = true

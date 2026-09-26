@@ -30,8 +30,8 @@ enum CustomError: Swift.Error, CustomLocalizedStringResourceConvertible {
 class DataController: ObservableObject {
     static let shared = DataController()
 
-    var container = NSPersistentCloudKitContainer(name: "MainModel")
-
+    var container = NSPersistentContainer(name: "MainModel")
+    
     init() {
         let description = NSPersistentStoreDescription()
 
@@ -52,13 +52,13 @@ class DataController: ObservableObject {
 //            description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.rafaelsoh.dime")
 //        }
 
-        description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.rafaelsoh.dime")
+        //description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.rafaelsoh.dime")
 
-        let groupID = "group.com.rafaelsoh.dime"
+        //let groupID = "group.com.rafaelsoh.dime"
 
-        if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: groupID) {
-            description.url = url.appendingPathComponent("Main.sqlite")
-        }
+       // if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: groupID) {
+          //  description.url = url.appendingPathComponent("Main.sqlite")
+        //}
 
         container.persistentStoreDescriptions = [description]
 

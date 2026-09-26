@@ -1,9 +1,6 @@
 //
 //  GetInsightsIntent.swift
-//  dime
-//
-//  Created by Rafael Soh on 5/8/23.
-//
+
 
 import AppIntents
 import Foundation

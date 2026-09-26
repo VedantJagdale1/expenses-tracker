@@ -57,13 +57,13 @@ struct UpdateAlert: View {
                         Image(systemName: "star.fill")
                             .font(.system(.callout, design: .rounded))
 //                            .font(.system(size: 16))
-                        Text("What's New?")
+                        Text("")
                             .font(.system(.title2, design: .rounded).weight(.medium))
 //                            .font(.system(size: 22, weight: .medium, design: .rounded))
                     }
                     .foregroundColor(.PrimaryText)
 
-                    Text("Version \(UIApplication.appVersion ?? "") (\(UIApplication.buildNumber ?? "")) · 18 Sep 2023")
+                    Text("") 
                         .font(.system(.subheadline, design: .rounded).weight(.medium))
 //                        .font(.system(size: 15, weight: .medium, design: .rounded))
                         .foregroundColor(.SubtitleText)
